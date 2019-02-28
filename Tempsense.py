@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 import os
-import pandas as pd
-import matplotlib as plt
+
 
 def sensor():
     for i in os.listdir('/sys/bus/w1/devices'):
@@ -29,9 +28,7 @@ def loop(ds18b20):
     while True:
         if read(ds18b20) != None:
             print "Current temperature : %0.3f F" % read(ds18b20)[1]
-            df.append(read(ds18b20))
-            dt.append(n+1)
-df.plot()
+
 def kill():
     quit()
 
