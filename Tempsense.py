@@ -21,8 +21,6 @@ def read(ds18b20):
     return celsius, farenheit
 
 def loop(ds18b20):
-    df = pd.dataframe[]
-    dt = pd.dataframe[n]
     index=dt
     n = 0
     while True:
