@@ -21,8 +21,6 @@ def read(ds18b20):
     return celsius, farenheit
 
 def loop(ds18b20):
-    index=dt
-    n = 0
     while True:
         if read(ds18b20) != None:
             print "Current temperature : %0.3f F" % read(ds18b20)[1]
